@@ -1,0 +1,25 @@
+ [
+  {
+    "title": "Growth of student",
+    "id": "AdperYear",
+    "fullName":"John Link",
+    "class":" 11 A",
+    "info": [
+      {
+        "id": "Marks",
+        "title": "Variation in Marks",
+        "Maths":"67",
+        "Physics":"83",
+        "Chemistry":"91",
+        "Language":"71",
+        "GK":"84",
+        "Computer":"93",
+        "GA":"78",
+        "description": "This is my first task"
+      }
+    ]
+  }
+ 
+    
+]
+

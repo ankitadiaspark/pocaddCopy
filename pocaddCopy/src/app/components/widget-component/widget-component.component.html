@@ -1,0 +1,120 @@
+<!-- 
+  <div class="content" role="main">
+    <div
+      class="board "
+      cdkDropList
+      [cdkDropListData]="tracks"
+      (cdkDropListDropped)="onTrackDrop($event)"
+      cdkDropListOrientation="horizontal"
+    >
+      <div class="draggable" cdkDrag>
+        <img
+          width="24px"
+          class="handle"
+          src="../assets/img/handle.png"
+          cdkDragHandle
+        />
+        <div class="droppable" *cdkDragPlaceholder></div>
+        <a
+          class="card"
+          target="_blank"
+          rel="noopener"
+          href="https://angular.io/tutorial"
+        >
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"
+            />
+          </svg>
+
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </a>
+        <div class="card-list mat-elevation-z1" *ngFor="let widget of widgets">
+          <div cdkDragHandle class="mat-h2">{{ widget.title }}</div>
+        </div>
+      </div>
+      <div class="draggable" cdkDrag>
+        <img
+          width="24px"
+          class="handle"
+          src="../assets/img/handle.png"
+          cdkDragHandle
+        />
+        <div class="droppable" *cdkDragPlaceholder></div>
+        <a
+          class="card"
+          target="_blank"
+          rel="noopener"
+          href="https://angular.io/cli"
+        >
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+            />
+          </svg>
+    
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </a>
+     
+        <div
+          class="card-list mat-elevation-z1 mat-h2"
+          cdkDropList
+          [id]="widgets.id"
+          [cdkDropListData]="widgets.info"
+          [cdkDropListConnectedTo]="trackIds"
+          (cdkDropListDropped)="onTalkDrop($event)"
+        >
+          <div *ngFor="let widget of widgets" cdkDrag>
+            <div>
+              {{ widget.id }}
+              {{ widget.title }}
+
+            </div>
+          </div> 
+         </div>
+      </div>
+    </div>
+  </div>
+ -->
+
+
+
+  <mat-grid-tile class="leftDiv">leftDiv</mat-grid-tile> <mat-grid-tile class="centerDiv">centerDiv</mat-grid-tile>
+   <mat-grid-tile class="belowLeftDiv">belowLeftDiv</mat-grid-tile>
+ <mat-grid-tile class="belowBelowLeftDiv">belowBelowLeftDiv</mat-grid-tile>
+  
+<mat-grid-tile class="belowCenterDiv">belowCenterDiv</mat-grid-tile>
+  <mat-grid-tile class="rightTobelowCenterDiv">rightTobelowCenterDiv</mat-grid-tile>
+ <mat-grid-tile class="rightToCenterDiv">rightToCenterDiv</mat-grid-tile>
+  <mat-grid-tile class="belowRightToCenterDiv">belowRightToCenterDiv</mat-grid-tile>
+   <mat-grid-tile class="belowBelowRightToCenterDiv">belowBelowRightToCenterDiv</mat-grid-tile>
+   <mat-grid-tile class="rightDiv">rightDiv</mat-grid-tile>
+  <mat-grid-tile class="belowRightDiv">belowRightDiv</mat-grid-tile> 
