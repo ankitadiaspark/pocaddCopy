@@ -27,6 +27,7 @@
     "angular-material-widget-engine": "^2.4.0",
     "angular-resizable-element": "^3.2.6",
     "angular2-uuid": "^1.1.1",
+    "bootstrap": "^4.1.1",
     "bulma": "^0.8.0",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",

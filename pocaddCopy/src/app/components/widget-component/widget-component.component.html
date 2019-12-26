@@ -105,16 +105,88 @@
   </div>
  -->
 
-
-
-  <mat-grid-tile class="leftDiv">leftDiv</mat-grid-tile> <mat-grid-tile class="centerDiv">centerDiv</mat-grid-tile>
-   <mat-grid-tile class="belowLeftDiv">belowLeftDiv</mat-grid-tile>
- <mat-grid-tile class="belowBelowLeftDiv">belowBelowLeftDiv</mat-grid-tile>
+<mat-grid-tile class="leftDiv">
+  <div
+    style="display: block;width:inherit;height:auto"
+    cdkDropList
+    #barChart="cdkDropList"
+    [cdkDropListData]="pieChart"
+    [cdkDropListConnectedTo]="[pieChart]"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <canvas
+      cdkDrag
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+    >
+    </canvas>
+  </div>
+</mat-grid-tile>
+<mat-grid-tile class="centerDiv">
   
-<mat-grid-tile class="belowCenterDiv">belowCenterDiv</mat-grid-tile>
-  <mat-grid-tile class="rightTobelowCenterDiv">rightTobelowCenterDiv</mat-grid-tile>
- <mat-grid-tile class="rightToCenterDiv">rightToCenterDiv</mat-grid-tile>
-  <mat-grid-tile class="belowRightToCenterDiv">belowRightToCenterDiv</mat-grid-tile>
-   <mat-grid-tile class="belowBelowRightToCenterDiv">belowBelowRightToCenterDiv</mat-grid-tile>
-   <mat-grid-tile class="rightDiv">rightDiv</mat-grid-tile>
-  <mat-grid-tile class="belowRightDiv">belowRightDiv</mat-grid-tile> 
+</mat-grid-tile>
+<mat-grid-tile class="belowLeftDiv">
+  <!-- belowLeftDiv -->
+  <div
+    style="display: block;"
+    cdkDropList
+    #pieChart="cdkDropList"
+    [cdkDropListData]="barChart"
+    [cdkDropListConnectedTo]="[barChart]"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <canvas
+      cdkDrag
+      baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+    >
+    </canvas>
+  </div>
+</mat-grid-tile>
+<mat-grid-tile class="rightTobelowCenterDiv">
+  <!-- rightTobelowCenterDiv -->
+  <div cdkdrop (dropped)="drop($event)">
+    <div *ngFor="let widget of widgets" cdkDrag>{{ widget.title }}</div>
+  </div>
+</mat-grid-tile>
+<mat-grid-tile class="rightToCenterDiv">
+  <!-- rightToCenterDiv -->
+</mat-grid-tile>
+<mat-grid-tile class="rightDiv">
+  <!-- rightDiv -->
+  <div cdkdrop (dropped)="drop($event)">
+    <div *ngFor="let widget of widgets" cdkDrag>{{ widget.title }}</div>
+  </div>
+</mat-grid-tile>
+<mat-grid-tile class="belowRightDiv">
+  <div
+    style="display: block;"
+    cdkDropList
+    #pieChart="cdkDropList"
+    [cdkDropListData]="barChart"
+    [cdkDropListConnectedTo]="[barChart]"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <canvas
+      cdkDrag
+      baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+    >
+    </canvas>
+  </div>
+</mat-grid-tile>

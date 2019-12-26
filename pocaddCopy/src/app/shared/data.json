@@ -8,14 +8,14 @@
       {
         "id": "Marks",
         "title": "Variation in Marks",
+        "description": "This is my first task",
         "Maths":"67",
         "Physics":"83",
         "Chemistry":"91",
         "Language":"71",
         "GK":"84",
         "Computer":"93",
-        "GA":"78",
-        "description": "This is my first task"
+        "GA":"78"
       }
     ]
   }
