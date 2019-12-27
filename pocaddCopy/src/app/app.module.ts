@@ -16,6 +16,7 @@ import { GridsterModule } from "angular-gridster2";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatTableModule } from '@angular/material'  ;
 @NgModule({
   declarations: [AppComponent, WidgetComponentComponent, HeaderComponent, FooterComponent],
   imports: [
@@ -29,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     GridsterModule,
     MatGridListModule,
+    MatTableModule,
     InMemoryWebApiModule.forRoot(WidgetService)
   ],
   providers: [WidgetService, ServerService],

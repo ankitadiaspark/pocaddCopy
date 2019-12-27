@@ -104,18 +104,26 @@
     </div>
   </div>
  -->
-
-<mat-grid-tile class="leftDiv">
-  <div
+ <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+<mat-grid-tile class="leftDiv" cdkDragBoundary=".example-boundary" cdkDrag>
+  <!-- <div class="droppable leftDiv" *cdkDragPlaceholder></div> -->
+  <!-- <div class="example-custom-placeholder" *cdkDragPlaceholder></div> -->
+  <!-- <div
     style="display: block;width:inherit;height:auto"
     cdkDropList
     #barChart="cdkDropList"
     [cdkDropListData]="pieChart"
     [cdkDropListConnectedTo]="[pieChart]"
     (cdkDropListDropped)="drop($event)"
-  >
+  > -->
+  <div class="example-handle" cdkDragHandle>
+    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+      <path d="M0 0h24v24H0z" fill="none"></path>
+    </svg>
+  </div>
+  <div>
     <canvas
-      cdkDrag
       baseChart
       [datasets]="barChartData"
       [labels]="barChartLabels"
@@ -125,23 +133,56 @@
       [chartType]="barChartType"
     >
     </canvas>
+    
   </div>
 </mat-grid-tile>
-<mat-grid-tile class="centerDiv">
+<mat-grid-tile class="centerDiv" cdkDrag>
+  <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <!-- <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+   -->
+    <!-- Name Column -->
+    <!-- <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.maths}} </td>
+    </ng-container> -->
+  
+    <!-- Weight Column -->
+    <!-- <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.physics}} </td>
+    </ng-container> -->
+  
+    <!-- Symbol Column -->
+    <!-- <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.chemistry}} </td>
+    </ng-container> -->
+  
+    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> --> 
   
 </mat-grid-tile>
-<mat-grid-tile class="belowLeftDiv">
+<mat-grid-tile class="belowLeftDiv" cdkDrag>
   <!-- belowLeftDiv -->
-  <div
+  <!-- <div
     style="display: block;"
     cdkDropList
     #pieChart="cdkDropList"
     [cdkDropListData]="barChart"
     [cdkDropListConnectedTo]="[barChart]"
     (cdkDropListDropped)="drop($event)"
-  >
+  > -->
+  <div>
     <canvas
-      cdkDrag
       baseChart
       [data]="pieChartData"
       [labels]="pieChartLabels"
@@ -153,32 +194,32 @@
     </canvas>
   </div>
 </mat-grid-tile>
-<mat-grid-tile class="rightTobelowCenterDiv">
+<mat-grid-tile class="rightTobelowCenterDiv" cdkDrag>
   <!-- rightTobelowCenterDiv -->
   <div cdkdrop (dropped)="drop($event)">
     <div *ngFor="let widget of widgets" cdkDrag>{{ widget.title }}</div>
   </div>
 </mat-grid-tile>
-<mat-grid-tile class="rightToCenterDiv">
+<mat-grid-tile class="rightToCenterDiv" cdkDrag>
   <!-- rightToCenterDiv -->
 </mat-grid-tile>
-<mat-grid-tile class="rightDiv">
+<mat-grid-tile class="rightDiv" cdkDrag>
   <!-- rightDiv -->
   <div cdkdrop (dropped)="drop($event)">
     <div *ngFor="let widget of widgets" cdkDrag>{{ widget.title }}</div>
   </div>
 </mat-grid-tile>
-<mat-grid-tile class="belowRightDiv">
-  <div
+<mat-grid-tile class="belowRightDiv" cdkDrag>
+  <!-- <div
     style="display: block;"
     cdkDropList
     #pieChart="cdkDropList"
     [cdkDropListData]="barChart"
     [cdkDropListConnectedTo]="[barChart]"
     (cdkDropListDropped)="drop($event)"
-  >
+  > -->
+  <div>
     <canvas
-      cdkDrag
       baseChart
       [data]="pieChartData"
       [labels]="pieChartLabels"
@@ -190,3 +231,4 @@
     </canvas>
   </div>
 </mat-grid-tile>
+ </div>

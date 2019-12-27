@@ -6,11 +6,9 @@ import {
   transferArrayItem
 } from "@angular/cdk/drag-drop";
 import { ChartOptions, ChartType, ChartDataSets } from "chart.js";
-// import * as pluginDataLabels from "chartjs-plugin-datalabels";
 import { Label, SingleDataSet } from "ng2-charts";
 import { Track, info } from "../../shared/Track.model";
 import data from "../../shared/data.json";
-import { GridsterConfig, GridsterItem } from "angular-gridster2";
 @Component({
   selector: "app-widget-component",
   templateUrl: "./widget-component.component.html",
@@ -18,10 +16,11 @@ import { GridsterConfig, GridsterItem } from "angular-gridster2";
 })
 export class WidgetComponentComponent implements OnInit {
   private tracks: Track[] = data;
+  private infos:info[];
   private data: any;
   widgets: any[] = [];
-  // barChart:any[]=[];
-  // pieChart:any[]=[];
+  displayedColumns: string[] = ['maths', 'physics', 'chemistry', 'language','GK','computer','GA'];
+  dataSource = this.widgets;
   public barChartOptions: ChartOptions = {
     responsive: true
   };
