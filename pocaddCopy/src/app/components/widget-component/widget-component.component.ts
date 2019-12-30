@@ -1,9 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit,ViewChildren, QueryList } from "@angular/core";
 import { ServerService } from "../../services/server.service";
+import { map } from 'rxjs/operators';
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import {
   CdkDragDrop,
   moveItemInArray,
-  transferArrayItem
+  transferArrayItem,
+  CdkDragEnter
 } from "@angular/cdk/drag-drop";
 import { ChartOptions, ChartType, ChartDataSets } from "chart.js";
 import { Label, SingleDataSet } from "ng2-charts";
@@ -16,10 +19,19 @@ import data from "../../shared/data.json";
 })
 export class WidgetComponentComponent implements OnInit {
   private tracks: Track[] = data;
-  private infos:info[];
   private data: any;
+  chartDiv: any[] = [];
+  containerDiv: any[] = [];
   widgets: any[] = [];
-  displayedColumns: string[] = ['maths', 'physics', 'chemistry', 'language','GK','computer','GA'];
+  displayedColumns: string[] = [
+    "maths",
+    "physics",
+    "chemistry",
+    "language",
+    "GK",
+    "computer",
+    "GA"
+  ];
   dataSource = this.widgets;
   public barChartOptions: ChartOptions = {
     responsive: true
@@ -71,6 +83,14 @@ export class WidgetComponentComponent implements OnInit {
   get trackIds(): string[] {
     return this.tracks.map(track => track.id);
   }
+  // entered($event: CdkDragEnter) {
+  //   console.log($event.item.data, $event.container.data);
+  //   moveItemInArray(this.cards, $event.item.data, $event.container.data);
+  // }
+  // entered2($event: CdkDragEnter) {
+  //   console.log($event.item.data, $event.container.data);
+  //   moveItemInArray(this.cards, $event.item.data, $event.container.data);
+  // }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
@@ -79,8 +99,7 @@ export class WidgetComponentComponent implements OnInit {
         event.previousIndex,
         event.currentIndex
       );
-    } 
-    else {
+    } else {
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
