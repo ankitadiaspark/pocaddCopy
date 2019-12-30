@@ -1,25 +1,17 @@
- [
-  {
-    "title": "Growth of student",
-    "id": "AdperYear",
-    "fullName":"John Link",
-    "class":" 11 A",
-    "info": [
-      {
-        "id": "Marks",
-        "title": "Variation in Marks",
-        "description": "This is my first task",
-        "Maths":"67",
-        "Physics":"83",
-        "Chemistry":"91",
-        "Language":"71",
-        "GK":"84",
-        "Computer":"93",
-        "GA":"78"
-      }
-    ]
-  }
- 
-    
-]
+{
+  "widget" :[{
+    "id" : 1,
+    "name": "Learn Angular",
+    "data" :"Eyes are organs of the visual system. They provide animals with vision, the ability to receive and process visual detail, as well as enabling several photo response functions that are independent of vision. Eyes detect light and convert it into electro-chemical impulses in neurons. In higher organisms, the eye is a complex optical system which collects light from the surrounding environment, regulates its intensity through a diaphragm, focuses it through an adjustable assembly of lenses to form an image, converts this image into a set of electrical signals, and transmits these signals to the brain through complex neural pathways that connect the eye via the optic nerve to the visual cortex and other areas of the brain. Eyes with resolving power have come in ten fundamentally different forms, and 96% of animal species possess a complex optical system.[1] Image-resolving eyes are present in molluscs, chordates and arthropods.[2]"
+  },{
+    "id" : 2,
+    "name": "CLI Documentation",
+    "data" :"The human nose is the most protruding part of the face. It bears the nostrils and is the first organ of the respiratory system. It is also the principal organ in the olfactory system. The shape of the nose is determined by the nasal bones and the nasal cartilages, including the nasal septum which separates the nostrils and divides the nasal cavity into two. On average the nose of a male is larger than that of a female.In vertebrate anatomy, the throat is the front part of the neck, positioned in front of the vertebra. It contains the pharynx and larynx. An important section of it is the epiglottis, separating the esophagus from the trachea (windpipe), preventing food and drinks being inhaled into the lungs.[citation needed] The throat contains various blood vessels, pharyngeal muscles, the nasopharyngeal tonsil, the tonsils, the palatine uvula, the trachea, the esophagus, and the vocal cords.[citation needed] Mammal throats consist of two bones, the hyoid bone and the clavicle. "
+  },{
+    "id" : 3,
+    "name": "Angular Blog",
+    "data":"In vertebrate anatomy, the throat is the front part of the neck, positioned in front of the vertebra. It contains the pharynx and larynx. An important section of it is the epiglottis, separating the esophagus from the trachea (windpipe), preventing food and drinks being inhaled into the lungs.[citation needed] The throat contains various blood vessels, pharyngeal muscles, the nasopharyngeal tonsil, the tonsils, the palatine uvula, the trachea, the esophagus, and the vocal cords.[citation needed] Mammal throats consist of two bones, the hyoid bone and the clavicle. "
+  }],
+  "order":[2,3,1]
+}
 
