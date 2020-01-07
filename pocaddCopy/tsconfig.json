@@ -5,14 +5,15 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "resolveJsonModule": true, 
   "esModuleInterop": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "importHelpers": true,
     "target": "es2015",
+    "types" : ["node"],
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -24,5 +25,8 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "types": [
+    "underscore"
+  ]
 }
