@@ -1,0 +1,189 @@
+<!-- 
+  <div class="content" role="main">
+    <div
+      class="board "
+      cdkDropList
+      [cdkDropListData]="tracks"
+      (cdkDropListDropped)="onTrackDrop($event)"
+      cdkDropListOrientation="horizontal"
+    >
+      <div class="draggable" cdkDrag>
+        <img
+          width="24px"
+          class="handle"
+          src="../assets/img/handle.png"
+          cdkDragHandle
+        />
+        <div class="droppable" *cdkDragPlaceholder></div>
+        <a
+          class="card"
+          target="_blank"
+          rel="noopener"
+          href="https://angular.io/tutorial"
+        >
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"
+            />
+          </svg>
+
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </a>
+        <div class="card-list mat-elevation-z1" *ngFor="let widget of widgets">
+          <div cdkDragHandle class="mat-h2">{{ widget.title }}</div>
+        </div>
+      </div>
+      <div class="draggable" cdkDrag>
+        <img
+          width="24px"
+          class="handle"
+          src="../assets/img/handle.png"
+          cdkDragHandle
+        />
+        <div class="droppable" *cdkDragPlaceholder></div>
+        <a
+          class="card"
+          target="_blank"
+          rel="noopener"
+          href="https://angular.io/cli"
+        >
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+            />
+          </svg>
+    
+          <svg
+            class="material-icons"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </a>
+     
+        <div
+          class="card-list mat-elevation-z1 mat-h2"
+          cdkDropList
+          [id]="widgets.id"
+          [cdkDropListData]="widgets.info"
+          [cdkDropListConnectedTo]="trackIds"
+          (cdkDropListDropped)="onTalkDrop($event)"
+        >
+          <div *ngFor="let widget of widgets" cdkDrag>
+            <div>
+              {{ widget.id }}
+              {{ widget.title }}
+
+            </div>
+          </div> 
+         </div>
+      </div>
+    </div>
+  </div>
+ -->
+<!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)"> -->
+  <div cdkDropListGroup>
+    <div class="containerDiv">
+      <div
+    cdkDropList
+    #containerDiv="cdkDropList"
+    [cdkDropListData]="containerDiv"
+    (cdkDropListDropped)="drop($event)"></div>
+    </div>
+  <mat-grid-tile class="leftDiv" cdkDragBoundary=".example-boundary" cdkDrag>
+    <!-- <div class="droppable leftDiv" *cdkDragPlaceholder></div> -->
+    <!-- <div class="example-custom-placeholder" *cdkDragPlaceholder></div> -->
+    <div class="example-handle" cdkDragHandle>
+      <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"
+        ></path>
+        <path d="M0 0h24v24H0z" fill="none"></path>
+      </svg>
+    </div>
+    <div class="droppable" *cdkDragPlaceholder></div>
+    <div
+    cdkDropList
+    #barChart="cdkDropList"
+    [cdkDropListData]="containerDiv"
+    [cdkDropListConnectedTo]="[containerDiv]"
+    (cdkDropListDropped)="drop($event)"
+  >
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="centerDiv" cdkDrag>
+  </mat-grid-tile>
+  <mat-grid-tile class="belowLeftDiv" cdkDrag>
+    <div>
+      <canvas
+        baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend"
+      >
+      </canvas>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="rightTobelowCenterDiv" cdkDrag>
+    <!-- <div cdkdrop (dropped)="drop($event)">
+      <div *ngFor="let widget of widgets" cdkDrag>{{ widget.title }}</div>
+    </div> -->
+  </mat-grid-tile>
+  <mat-grid-tile class="rightToCenterDiv" cdkDrag>
+  </mat-grid-tile>
+  <mat-grid-tile class="rightDiv" cdkDrag>
+    <!-- <div cdkdrop (dropped)="drop($event)">
+      <div *ngFor="let widget of widgets" cdkDrag>{{ widget.title }}</div>
+    </div> -->
+  </mat-grid-tile>
+  <mat-grid-tile class="belowRightDiv" cdkDrag>
+    <div>
+      <canvas
+        baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend"
+      >
+      </canvas>
+    </div>
+  </mat-grid-tile>
+</div>
