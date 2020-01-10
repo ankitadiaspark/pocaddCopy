@@ -25,10 +25,7 @@
           "label": "marks in subjects"
         }
       ],
-      "format": [
-        "graph",
-        "tabular"
-      ]
+      "format": "line"
     },
     {
       "id": 2,
@@ -44,21 +41,18 @@
       "dataValue": [
         {
           "data": [
-            67,
-            83,
-            91,
-            71,
-            84,
-            93,
-            78
+            10,
+            30,
+            54,
+            11,
+            45,
+            65,
+            10
           ],
           "label": "marks in subjects"
         }
       ],
-      "format": [
-        "graph",
-        "tabular"
-      ]
+      "format": "radar"
     },
     {
       "id": 3,
@@ -85,10 +79,7 @@
           "label": "marks in subjects"
         }
       ],
-      "format": [
-        "graph",
-        "tabular"
-      ]
+      "format": "bar"
     }
   ],
   "order": {
