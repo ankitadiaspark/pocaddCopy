@@ -1,0 +1,143 @@
+<div class="toolbar" role="banner">
+  <h3>&nbsp; &nbsp; &nbsp;<span>Student Information</span></h3>
+  <div class="spacer"></div>
+</div>
+<div class="content" role="main">
+  <div
+    cdkDropList
+    class="card-container widgets"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <div
+      class="draggable"
+      style="background-color: rgb(168, 235, 211);"
+      cdkDrag
+    >
+      <div class="droppable" *cdkDragPlaceholder></div>
+
+      <canvas
+        *ngIf="chartReady"
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        [plugins]="lineChartPlugins"
+      >
+      </canvas>
+    </div>
+    <div
+      class="draggable"
+      style="background-color: rgb(168, 235, 211);"
+      cdkDrag
+    >
+      <div class="droppable" *cdkDragPlaceholder></div>
+
+      <canvas
+        *ngIf="chartReady"
+        baseChart
+        [datasets]="radarChartData"
+        [options]="radarChartOptions"
+        [labels]="radarChartLabels"
+        [chartType]="radarChartType"
+      >
+      </canvas>
+    </div>
+    <div
+      class="draggable"
+      style="background-color: rgb(168, 235, 211);"
+      cdkDrag
+    >
+      <div class="droppable" *cdkDragPlaceholder></div>
+
+      <canvas
+        *ngIf="chartReady"
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+
+
+
+  </div>
+
+<!-- right side
+<div
+    cdkDropList
+    class="card-containerRight widgetsRight"
+    (cdkDropListDropped)="drop($event)"
+  >
+<div
+class="draggableRight"
+style="background-color: rgb(168, 235, 211);"
+cdkDrag
+>
+<div class="droppable" *cdkDragPlaceholder></div>
+
+<canvas
+  *ngIf="chartReady"
+  baseChart
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [legend]="barChartLegend"
+  [chartType]="barChartType"
+>
+</canvas>
+</div>
+<div
+class="draggableRight"
+style="background-color: rgb(168, 235, 211);"
+cdkDrag
+>
+<div class="droppable" *cdkDragPlaceholder></div>
+
+<canvas
+  *ngIf="chartReady"
+  baseChart
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [legend]="barChartLegend"
+  [chartType]="barChartType"
+>
+</canvas>
+</div>
+<div
+class="draggableRight"
+style="background-color: rgb(168, 235, 211);"
+cdkDrag
+>
+<div class="droppable" *cdkDragPlaceholder></div>
+
+<canvas
+  *ngIf="chartReady"
+  baseChart
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [legend]="barChartLegend"
+  [chartType]="barChartType"
+>
+</canvas>
+</div>
+</div> -->
+
+
+
+
+
+
+  <router-outlet></router-outlet>
+</div>

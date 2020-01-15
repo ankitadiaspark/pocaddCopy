@@ -1,0 +1,92 @@
+{
+  "widget": [
+    {
+      "id": 1,
+      "name": [
+        "maths",
+        "physics",
+        "chemistry",
+        "language",
+        "GK",
+        "computer",
+        "GA"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            67,
+            83,
+            91,
+            71,
+            84,
+            93,
+            78
+          ],
+          "label": "marks in subjects"
+        }
+      ],
+      "format": "line"
+    },
+    {
+      "id": 2,
+      "name": [
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            10,
+            30,
+            54,
+            11,
+            45,
+            65,
+            10
+          ],
+          "label": "marks in subjects"
+        }
+      ],
+      "format": "radar"
+    },
+    {
+      "id": 3,
+      "name": [
+        "june",
+        "july",
+        "August",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            67,
+            83,
+            91,
+            71,
+            84,
+            93,
+            78
+          ],
+          "label": "marks in subjects"
+        }
+      ],
+      "format": "bar"
+    }
+  ],
+  "order": {
+    "ids": [
+      3,
+      2,
+      1
+    ]
+  }
+}
