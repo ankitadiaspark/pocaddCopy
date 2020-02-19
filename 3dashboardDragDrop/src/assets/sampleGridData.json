@@ -1,0 +1,343 @@
+{
+  "widget": [
+    {
+      "id": 1,
+      "name": [
+        "maths",
+        "physics",
+        "chemistry",
+        "language",
+        "GK",
+        "computer",
+        "GA"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            67,
+            83,
+            91,
+            71,
+            84,
+            93,
+            78
+          ],
+          "label": "marks in subjects"
+        },
+        {
+          "data": [
+            28,
+            48,
+            40,
+            19,
+            86,
+            27,
+            90
+          ],
+          "label": "behavioural marks"
+        },
+        {
+          "data": [
+            20,
+            38,
+            30,
+            29,
+            76,
+            47,
+            80
+          ],
+          "label": "behavioural marks"
+        }
+      ],
+      "format": "line"
+    },
+    {
+      "id": 2,
+      "name": [
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            10,
+            30,
+            54,
+            11,
+            45,
+            65,
+            10
+          ],
+          "label": "Product Market Value in past year"
+        },
+        {
+          "data": [
+            28,
+            48,
+            40,
+            19,
+            86,
+            27,
+            90
+          ],
+          "label": "Product Market Value in current year"
+        },
+        {
+          "data": [
+            20,
+            38,
+            30,
+            29,
+            76,
+            47,
+            80
+          ],
+          "label": "behavioural marks"
+        }
+      ],
+      "format": "radar"
+    },
+    {
+      "id": 3,
+      "name": [
+        "june",
+        "july",
+        "August",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            22,
+            21,
+            18,
+            20,
+            16,
+            23,
+            20
+          ],
+          "label": "heighest temperature per month"
+        },
+        {
+          "data": [
+            20,
+            19,
+            18,
+            17,
+            15,
+            20,
+            16
+          ],
+          "label": "average temperature per month"
+        },
+        {
+          "data": [
+            20,
+            38,
+            30,
+            29,
+            76,
+            47,
+            80
+          ],
+          "label": "behavioural marks"
+        }
+      ],
+      "format": "bar"
+    },
+    {
+      "id": 4,
+      "name": [
+        "june",
+        "july",
+        "August",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "dataValue": [
+        300,
+        500,
+        100,
+        40,
+        120,
+        400,
+        200,
+        550
+      ],
+      "format": "polarArea"
+    },
+    {
+      "id": 5,
+      "name": [
+        [
+          "Download",
+          "Sales"
+        ],
+        [
+          "In",
+          "Store",
+          "Sales"
+        ],
+        "Mail Sales"
+      ],
+      "dataValue": [
+        300,
+        500,
+        100
+      ],
+      "format": "pie"
+    },
+    {
+      "id": 6,
+      "name": [
+        "Download Sales",
+        " In-Store Sales",
+        "Mail-Order Sales"
+      ],
+      "dataValue": [
+        [
+          350,
+          450,
+          100
+        ],
+        [
+          50,
+          150,
+          120
+        ],
+        [
+          250,
+          130,
+          70
+        ]
+      ],
+      "format": "doughnut"
+    }
+  ],
+  "order": {
+    "ids": [
+      3,
+      2,
+      1,
+      5,
+      6,
+      4
+    ]
+  },
+  "widgetGrid": [
+    {
+      "id": 1,
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 2,
+      "wSm": 1,
+      "hSm": 1,
+      "wMd": 1,
+      "hMd": 2,
+      "wLg": 1,
+      "hLg": 1,
+      "wXl": 2,
+      "hXl": 2,
+      "dragAndDrop": true,
+      "resizable": true,
+      "title": "first"
+    },
+    {
+      "id": 2,
+      "x": 1,
+      "y": 0,
+      "w": 1,
+      "h": 2,
+      "wSm": 1,
+      "hSm": 1,
+      "wMd": 1,
+      "hMd": 2,
+      "wLg": 1,
+      "hLg": 1,
+      "wXl": 3,
+      "hXl": 2,
+      "dragAndDrop": true,
+      "resizable": true,
+      "title": "second"
+    },
+    {
+      "id": 3,
+      "x": 1,
+      "y": 1,
+      "w": 1,
+      "h": 2,
+      "wSm": 1,
+      "hSm": 1,
+      "wMd": 1,
+      "hMd": 2,
+      "wLg": 1,
+      "hLg": 1,
+      "wXl": 3,
+      "hXl": 2,
+      "dragAndDrop": true,
+      "resizable": true,
+      "title": "third"
+    },
+    {
+      "id": 4,
+      "x": 3,
+      "y": 1,
+      "w": 1,
+      "h": 2,
+      "wSm": 1,
+      "hSm": 1,
+      "wMd": 1,
+      "hMd": 2,
+      "wLg": 1,
+      "hLg": 1,
+      "wXl": 3,
+      "hXl": 2,
+      "dragAndDrop": true,
+      "resizable": true,
+      "title": "fourth"
+    },
+    {
+      "id": 5,
+      "w": 1,
+      "h": 2,
+      "wSm": 1,
+      "hSm": 1,
+      "wMd": 1,
+      "hMd": 2,
+      "wLg": 1,
+      "hLg": 1,
+      "wXl": 3,
+      "hXl": 2,
+      "dragAndDrop": true,
+      "resizable": true,
+      "title": "fifth"
+    },
+    {
+      "id": 6,
+      "w": 1,
+      "h": 2,
+      "wSm": 1,
+      "hSm": 1,
+      "wMd": 1,
+      "hMd": 2,
+      "wLg": 1,
+      "hLg": 1,
+      "wXl": 2,
+      "hXl": 2,
+      "dragAndDrop": true,
+      "resizable": true,
+      "title": "sixth"
+    }
+  ]
+}

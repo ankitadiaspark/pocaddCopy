@@ -1,0 +1,182 @@
+<div class="control-section">
+  <ejs-dashboardlayout
+    id="default_dashboard"
+    columns="5"
+    #default_dashboard
+    [cellSpacing]="cellSpacing"
+    [allowResizing]="true"
+  >
+    <div
+      id="two"
+      class="e-panel"
+      data-row="0"
+      data-col="0"
+      data-sizeX="1"
+      data-sizeY="2"
+    >
+      <span
+        id="close"
+        class="e-template-icon e-close-icon"
+        (click)="onCloseIconHandler($event)"
+      ></span>
+      <div
+        style="background-color: rgb(211, 215, 250);"
+        class="e-panel-container"
+      >
+        <div class="text-align">
+          <a routerLink="/format">1.highest temperature per month
+            <br/>
+            2.average temperature per month
+            <br/>
+            3.Product Market Value in past year
+            <br/>
+            4.Product Market Value in current year
+            <br/>
+            5.marks in subjects
+            <br/>
+            6.behavioural marks
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      id="three"
+      class="e-panel"
+      data-row="0"
+      data-col="1"
+      data-sizeX="3"
+      data-sizeY="2"
+    >
+      <span
+        id="close"
+        class="e-template-icon e-close-icon"
+        (click)="onCloseIconHandler($event)"
+      ></span>
+      <div
+        style="background-color: rgb(232, 201, 235);"
+        class="e-panel-container"
+      >
+        <div class="text-align">
+          <canvas
+            *ngIf="chartReady"
+            baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            [plugins]="lineChartPlugins"
+          >
+          </canvas>                          
+        </div>                          
+      </div>                          
+    </div>                          
+    <div                          
+      id="four"
+      class="e-panel"
+      data-row="2"
+      data-col="0"
+      data-sizeX="2"
+      data-sizeY="1"
+    >
+      <span
+        id="close"
+        class="e-template-icon e-close-icon"
+        (click)="onCloseIconHandler($event)"
+      ></span>
+      <div
+        style="background-color: rgb(232, 201, 235);"
+        class="e-panel-container"
+      >
+        <div class="text-align"><canvas
+          *ngIf="chartReady"
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+        >
+        </canvas></div>
+      </div>
+    </div>
+    <div
+      id="five"
+      class="e-panel"
+      data-row="2"
+      data-col="2"
+      data-sizeX="2"
+      data-sizeY="1"
+    >
+      <span
+        id="close"
+        class="e-template-icon e-close-icon"
+        (click)="onCloseIconHandler($event)"
+      ></span>
+      <div
+        style="background-color:rgb(232, 201, 235);"
+        class="e-panel-container"
+      >
+        <div class="text-align">
+          <canvas
+            *ngIf="chartReady"
+            baseChart
+            [datasets]="radarChartData"
+            [options]="radarChartOptions"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType"
+          >
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div
+      id="eight"
+      class="e-panel"
+      data-row="0"
+      data-col="4"
+      data-sizeX="1"
+      data-sizeY="2"
+    >
+      <span
+        id="close"
+        class="e-template-icon e-close-icon"
+        (click)="onCloseIconHandler($event)"
+      ></span>
+      <div
+        style="background-color: rgb(211, 215, 250);"
+        class="e-panel-container"
+      >
+        <div class="text-align">
+          <agm-map [latitude]='latitude' [longitude]='longitude' 
+          [mapTypeId]='mapType'>
+        </agm-map></div>
+      </div>
+    </div>
+    <div
+      id="six"
+      class="e-panel"
+      data-row="2"
+      data-col="4"
+      data-sizeX="1"
+      data-sizeY="1"
+    >
+      <span
+        id="close"
+        class="e-template-icon e-close-icon"
+        (click)="onCloseIconHandler($event)"
+      ></span>
+      <div
+        style="background-color: rgb(211, 215, 250);"
+        class="e-panel-container"
+      >
+      <img  src="assets\img\literacyrate1.jfif" alt="literacy rate in India">
+        <div class="text-align">
+         
+        </div>
+      </div>
+    </div>
+  </ejs-dashboardlayout>
+</div>
