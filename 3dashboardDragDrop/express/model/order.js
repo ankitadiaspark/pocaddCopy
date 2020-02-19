@@ -31,10 +31,15 @@ exports.updateData = (toUpdate, data) => {
     console.log(prevData, "prevdata");
     console.log(order, "order");
     console.log(data, "data");
+    // var ad = new order({
+    //     ids: req.body.ids
+       
+    // });
+    var newData={ids:data}
     order
-      .findOneAndUpdate(
-        order,
-        { $set: { ids: body } },
+      .updateOne(
+        toUpdate,
+        newData,
         { multi: true, new: true }
       )
       .then(res => {
@@ -59,3 +64,5 @@ exports.updateData = (toUpdate, data) => {
       });
   });
 };
+
+

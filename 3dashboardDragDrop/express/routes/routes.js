@@ -12,7 +12,7 @@ router.put("/newOrder", orderCtrl.update);
 const order=mongoose.model('order')
 router.put("/newOrder1",(req,res)=>{
     var update={};
-    update[req.body]=req.body;
+    update[req.body]=req.body.value;
     order.update(
         {order},
         {$set:update},
