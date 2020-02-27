@@ -1,0 +1,298 @@
+<div class="omnibar"></div>
+<div class="main-content">
+  <ngx-gridster
+    [options]="gridsterOptions"
+    [draggableOptions]="gridsterDraggableOptions"
+    #gridster1
+    cdkDropList
+    class="dashboard"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <ngx-gridster-item
+      #itemComp
+      cdkDrag
+      [options]="itemOptions"
+      [dragAndDrop]="widgets[0].dragAndDrop"
+      [resizable]="widgets[0].resizable"
+      [(x)]="widgets[0].x"
+      [(y)]="widgets[0].y"
+      [(xSm)]="widgets[0].xSm"
+      [(ySm)]="widgets[0].ySm"
+      [(xMd)]="widgets[0].xMd"
+      [(yMd)]="widgets[0].yMd"
+      [(xLg)]="widgets[0].xLg"
+      [(yLg)]="widgets[0].yLg"
+      [(xXl)]="widgets[0].xXl"
+      [(yXl)]="widgets[0].yXl"
+      [(w)]="widgets[0].w"
+      [(h)]="widgets[0].h"
+      [(wSm)]="widgets[0].wSm"
+      [(hSm)]="widgets[0].hSm"
+      [(wMd)]="widgets[0].wMd"
+      [(hMd)]="widgets[0].hMd"
+      [(wLg)]="widgets[0].wLg"
+      [(hLg)]="widgets[0].hLg"
+      [(wXl)]="widgets[0].wXl"
+      [(hXl)]="widgets[0].hXl"
+      (change)="itemChange($event, gridster1)"
+    >
+      <div class="panel-heading">
+        <h5 class="panel-title" style="background-color: rgb(131, 232, 245);">
+          {{ widgets[0].title }}
+        </h5>
+        <canvas
+          *ngIf="chartReady"
+          baseChart
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins"
+        >
+        </canvas>
+      </div>
+
+      <div class="panel-body"></div>
+    </ngx-gridster-item>
+
+    <ngx-gridster-item
+      cdkDrag
+      #itemComp
+      [options]="itemOptions"
+      [dragAndDrop]="widgets[1].dragAndDrop"
+      [resizable]="widgets[1].resizable"
+      [(x)]="widgets[1].x"
+      [(y)]="widgets[1].y"
+      [(xSm)]="widgets[1].xSm"
+      [(ySm)]="widgets[1].ySm"
+      [(xMd)]="widgets[1].xMd"
+      [(yMd)]="widgets[1].yMd"
+      [(xLg)]="widgets[1].xLg"
+      [(yLg)]="widgets[1].yLg"
+      [(xXl)]="widgets[1].xXl"
+      [(yXl)]="widgets[1].yXl"
+      [(w)]="widgets[1].w"
+      [(h)]="widgets[1].h"
+      [(wSm)]="widgets[1].wSm"
+      [(hSm)]="widgets[1].hSm"
+      [(wMd)]="widgets[1].wMd"
+      [(hMd)]="widgets[1].hMd"
+      [(wLg)]="widgets[1].wLg"
+      [(hLg)]="widgets[1].hLg"
+      [(wXl)]="widgets[1].wXl"
+      [(hXl)]="widgets[1].hXl"
+      (change)="itemChange($event, gridster1)"
+    >
+      <div class="panel-heading">
+        <h5 class="panel-title" style="background-color: rgb(131, 232, 245);">
+          {{ widgets[1].title }}
+        </h5>
+
+        <canvas
+          *ngIf="chartReady"
+          baseChart
+          [datasets]="radarChartData"
+          [options]="radarChartOptions"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
+        >
+        </canvas>
+      </div>
+
+      <div class="panel-body"></div>
+    </ngx-gridster-item>
+
+    <ngx-gridster-item
+      cdkDrag
+      #itemComp
+      [options]="itemOptions"
+      [dragAndDrop]="widgets[2].dragAndDrop"
+      [resizable]="widgets[2].resizable"
+      [(x)]="widgets[2].x"
+      [(y)]="widgets[2].y"
+      [(xSm)]="widgets[2].xSm"
+      [(ySm)]="widgets[2].ySm"
+      [(xMd)]="widgets[2].xMd"
+      [(yMd)]="widgets[2].yMd"
+      [(xLg)]="widgets[2].xLg"
+      [(yLg)]="widgets[2].yLg"
+      [(xXl)]="widgets[2].xXl"
+      [(yXl)]="widgets[2].yXl"
+      [(w)]="widgets[2].w"
+      [(h)]="widgets[2].h"
+      [(wSm)]="widgets[2].wSm"
+      [(hSm)]="widgets[2].hSm"
+      [(wMd)]="widgets[2].wMd"
+      [(hMd)]="widgets[2].hMd"
+      [(wLg)]="widgets[2].wLg"
+      [(hLg)]="widgets[2].hLg"
+      [(wXl)]="widgets[2].wXl"
+      [(hXl)]="widgets[2].hXl"
+      (change)="itemChange($event, gridster1)"
+    >
+      <div class="panel-heading">
+        <h5 class="panel-title" style="background-color: rgb(131, 232, 245);">
+          {{ widgets[2].title }}
+        </h5>
+
+        <canvas
+          *ngIf="chartReady"
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+        >
+        </canvas>
+      </div>
+
+      <div class="panel-body"></div>
+    </ngx-gridster-item>
+
+    <ngx-gridster-item
+      cdkDrag
+      #itemComp
+      [options]="itemOptions"
+      [dragAndDrop]="widgets[3].dragAndDrop"
+      [resizable]="widgets[3].resizable"
+      [(x)]="widgets[3].x"
+      [(y)]="widgets[3].y"
+      [(xSm)]="widgets[3].xSm"
+      [(ySm)]="widgets[3].ySm"
+      [(xMd)]="widgets[3].xMd"
+      [(yMd)]="widgets[3].yMd"
+      [(xLg)]="widgets[3].xLg"
+      [(yLg)]="widgets[3].yLg"
+      [(xXl)]="widgets[3].xXl"
+      [(yXl)]="widgets[3].yXl"
+      [(w)]="widgets[3].w"
+      [(h)]="widgets[3].h"
+      [(wSm)]="widgets[3].wSm"
+      [(hSm)]="widgets[3].hSm"
+      [(wMd)]="widgets[3].wMd"
+      [(hMd)]="widgets[3].hMd"
+      [(wLg)]="widgets[3].wLg"
+      [(hLg)]="widgets[3].hLg"
+      [(wXl)]="widgets[3].wXl"
+      [(hXl)]="widgets[3].hXl"
+      (change)="itemChange($event, gridster1)"
+    >
+      <div class="panel-heading">
+        <h5 class="panel-title" style="background-color: rgb(131, 232, 245);">
+          {{ widgets[3].title }}
+        </h5>
+
+        <canvas
+          *ngIf="chartReady"
+          baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+        >
+        </canvas>
+      </div>
+
+      <div class="panel-body"></div>
+    </ngx-gridster-item>
+
+    <ngx-gridster-item
+      cdkDrag
+      #itemComp
+      [options]="itemOptions"
+      [dragAndDrop]="widgets[4].dragAndDrop"
+      [resizable]="widgets[4].resizable"
+      [(x)]="widgets[4].x"
+      [(y)]="widgets[4].y"
+      [(xSm)]="widgets[4].xSm"
+      [(ySm)]="widgets[4].ySm"
+      [(xMd)]="widgets[4].xMd"
+      [(yMd)]="widgets[4].yMd"
+      [(xLg)]="widgets[4].xLg"
+      [(yLg)]="widgets[4].yLg"
+      [(xXl)]="widgets[4].xXl"
+      [(yXl)]="widgets[4].yXl"
+      [(w)]="widgets[4].w"
+      [(h)]="widgets[4].h"
+      [(wSm)]="widgets[4].wSm"
+      [(hSm)]="widgets[4].hSm"
+      [(wMd)]="widgets[4].wMd"
+      [(hMd)]="widgets[4].hMd"
+      [(wLg)]="widgets[4].wLg"
+      [(hLg)]="widgets[4].hLg"
+      [(wXl)]="widgets[4].wXl"
+      [(hXl)]="widgets[4].hXl"
+      (change)="itemChange($event, gridster1)"
+    >
+      <div class="panel-heading">
+        <h5 class="panel-title" style="background-color: rgb(131, 232, 245);">
+          {{ widgets[4].title }}
+        </h5>
+
+        <canvas
+          *ngIf="chartReady"
+          baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        >
+        </canvas>
+      </div>
+
+      <div class="panel-body"></div>
+    </ngx-gridster-item>
+
+    <ngx-gridster-item
+      cdkDrag
+      #itemComp
+      [options]="itemOptions"
+      [dragAndDrop]="widgets[5].dragAndDrop"
+      [resizable]="widgets[5].resizable"
+      [(x)]="widgets[5].x"
+      [(y)]="widgets[5].y"
+      [(xSm)]="widgets[5].xSm"
+      [(ySm)]="widgets[5].ySm"
+      [(xMd)]="widgets[5].xMd"
+      [(yMd)]="widgets[5].yMd"
+      [(xLg)]="widgets[5].xLg"
+      [(yLg)]="widgets[5].yLg"
+      [(xXl)]="widgets[5].xXl"
+      [(yXl)]="widgets[5].yXl"
+      [(w)]="widgets[5].w"
+      [(h)]="widgets[5].h"
+      [(wSm)]="widgets[5].wSm"
+      [(hSm)]="widgets[5].hSm"
+      [(wMd)]="widgets[5].wMd"
+      [(hMd)]="widgets[5].hMd"
+      [(wLg)]="widgets[5].wLg"
+      [(hLg)]="widgets[5].hLg"
+      [(wXl)]="widgets[5].wXl"
+      [(hXl)]="widgets[5].hXl"
+      (change)="itemChange($event, gridster1)"
+    >
+      <div class="panel-heading">
+        <h5 class="panel-title" style="background-color: rgb(131, 232, 245);">
+          {{ widgets[5].title }}
+        </h5>
+
+        <canvas
+          *ngIf="chartReady"
+          baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [chartType]="doughnutChartType"
+        >
+        </canvas>
+      </div>
+
+      <div class="panel-body"></div>
+    </ngx-gridster-item>
+  </ngx-gridster>
+</div>

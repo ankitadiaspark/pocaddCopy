@@ -1,0 +1,164 @@
+{
+  "widget": [
+    {
+      "id": 1,
+      "name": [
+        "maths",
+        "physics",
+        "chemistry",
+        "language",
+        "GK",
+        "computer",
+        "GA"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            67,
+            83,
+            91,
+            71,
+            84,
+            93,
+            78
+          ],
+          "label": "marks in subjects"
+        },
+        {
+          "data": [
+            28,
+            48,
+            40,
+            19,
+            86,
+            27,
+            90
+          ],
+          "label": "behavioural marks"
+        },
+        {
+          "data": [
+            20,
+            38,
+            30,
+            29,
+            76,
+            47,
+            80
+          ],
+          "label": "behavioural marks"
+        }
+      ],
+      "format": "line"
+    },
+    {
+      "id": 2,
+      "name": [
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            10,
+            30,
+            54,
+            11,
+            45,
+            65,
+            10
+          ],
+          "label": "Product Market Value in past year"
+        },
+        {
+          "data": [
+            28,
+            48,
+            40,
+            19,
+            86,
+            27,
+            90
+          ],
+          "label": "Product Market Value in current year"
+        },
+        {
+          "data": [
+            20,
+            38,
+            30,
+            29,
+            76,
+            47,
+            80
+          ],
+          "label": "behavioural marks"
+        }
+      ],
+      "format": "radar"
+    },
+    {
+      "id": 3,
+      "name": [
+        "june",
+        "july",
+        "August",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "dataValue": [
+        {
+          "data": [
+            22,
+            21,
+            18,
+            20,
+            16,
+            23,
+            20
+          ],
+          "label": "heighest temperature per month"
+        },
+        {
+          "data": [
+            20,
+            19,
+            18,
+            17,
+            15,
+            20,
+            16
+          ],
+          "label": "average temperature per month"
+        },
+        {
+          "data": [
+            20,
+            38,
+            30,
+            29,
+            76,
+            47,
+            80
+          ],
+          "label": "behavioural marks"
+        }
+      ],
+      "format": "bar"
+    }
+  ],
+  "order": {
+    "ids": [
+      1,
+      2,
+      3
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Todo",
+    "id": "todo",
+    "tasks": [
+      {
+        "id": "first-task",
+        "title": "fourth task",
+        "description": "To check the time delay for loading images"
+      },
+      {
+        "id": "first-task",
+        "title": "Fifth task",
+        "description": "Sending Reports in PDF via Email"
+      },
+      {
+        "id": "first-task",
+        "title": "Sixth task",
+        "description": "SEnding Analysis Report of time taken by each funactionality"
+      }
+      
+    ]
+  },
+  {
+    "title": "In Progress",
+    "id": "inprogress",
+    "tasks": [
+      {
+        "id": "first-task",
+        "title": "third task",
+        "description": "Reports are not generating"
+      }
+    ]
+  },
+  {
+    "title": "Done",
+    "id": "ddone",
+    "tasks": [
+      {
+        "id": "first-task",
+        "title": "Second Task",
+        "description": "Email communication in application"
+      }
+    ]
+  },
+  {
+    "title": "QA Pass",
+    "id": "qapass",
+    "tasks": [
+      {
+        "id": "first-task",
+        "title": "First Task",
+        "description": "This is my first task"
+      }
+    ]
+  }
+]

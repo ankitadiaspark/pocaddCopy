@@ -1,0 +1,39 @@
+<div
+  class="board"
+  cdkDropList
+  [cdkDropListData]="tracks"
+  (cdkDropListDropped)="onTrackDrop($event)"
+  cdkDropListOrientation="horizontal"
+>
+  <div class="card-list mat-elevation-z1" *ngFor="let track of tracks">
+    <h2 cdkDragHandle class="mat-h2">{{ track.title }}</h2>
+
+    <div
+      class="card-list-content"
+      cdkDropList
+      [id]="track.id"
+      [cdkDropListData]="track.tasks"
+      [cdkDropListConnectedTo]="trackIds"
+      (cdkDropListDropped)="onTalkDrop($event)"
+    >
+      <mat-card *ngFor="let task of track.tasks" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        <mat-card-content>
+          <div style="font-weight:bold">
+            {{ task.title }}
+            <img
+              width="20px"
+              class="handle"
+              src="../assets/img/handle.png"
+              cdkDragHandle
+            />
+          </div>
+          <div>{{ task.description }}</div>
+          <div style="width: 60px;height: auto; background-color: whitesmoke;">
+            {{ track.title }}
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
